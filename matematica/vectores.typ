@@ -13,9 +13,11 @@
 #let kv = math.arrow($k$)
 // Dependiendo el autor la notación es diferente, por eso lo generalizo con variables.
 // Producto escalar
-#let escalar = math.times
+#let escalar = math.dot.op
+//#let escalar = math.times
 // Producto vectorial
-#let vectorial = math.and
+#let vectorial = math.times
+//#let vectorial = math.and
 
 #title[Vectores]
 
