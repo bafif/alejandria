@@ -120,36 +120,42 @@ Sean $uv$, $vv$ y $wv$ vectores.
 = Bases y componentes
 == Conjuntos de vectores:
 En adelante, nos va a servir considerar a los vectores como parte de un universo de vectores limitado al espacio que encierre una misma recta, un mismo plano o un mismo espacio, siendo:
+
 - $VV_1$: Vectores en la recta (espacio vectorial de 1 dimensión).
 - $VV_2$: Vectores en el plano (espacio vectorial de 2 dimensiones).
 - $VV_3$: Vectores en el espacio (espacio vectorial de 3 dimensiones).
+
 Lo que queremos decir con esto es que vamos a considerar, en cada contexto, un universo de vectores más limitado o más amplio, dependiendo de cuántas son las dimensiones espaciales en las que se distribuyen:
+
 - $VV_1$: Todos los vectores están contenidos en una misma recta, de modo que:
-+ Fijado $uv in VV_1$ no nulo, para cualquier $vv in VV_1$ existe único $alpha in RR bar vv = alpha uv$
-+ La forma $vv = alpha uv$ es la _descomposición_ de $vv$ en la _base_ ${uv}$ y $alpha$ es la _componente escalar_ de $uv$ en la base $uv$
+    + Fijado $uv in VV_1$ no nulo, para cualquier $vv in VV_1$ existe único $alpha in RR bar vv = alpha uv$
+    + La forma $vv = alpha uv$ es la _descomposición_ de $vv$ en la _base_ ${uv}$ y $alpha$ es la _componente escalar_ de $uv$ en la base $uv$
+
 Esto quiere decir que a partir de tomar un solo vector de $VV_1$, siempre podemos multiplicarlo por algún escalar para hallar cualquier otro vector de $VV_1$. Mantengamos esta idea para pensar lo siguiente:
+
 - $VV_2$: Todos los vectores están contenidos en un mismo plano, de modo que:
-+ Fijados $uv, vv in VV_2$ no nulos ni paralelos, cualquier $wv in VV_2$ puede ser _descompuesto_ según las direcciones de $uv$ y $vv$, habiendo únicos $alpha, beta in RR bar wv = alpha uv + beta vv$.
-+ ${uv, vv}$ es una base para $VV_2$ y $alpha$ y $beta$ son las _componentes_ de $wv$ en esa base.
-$alpha uv + beta uv$ es una *combinación lineal* de $uv$ y $vv$, esto es decir que solo los estamos sumando entre sí con distintas escalas, como si camináramos rectamente en la dirección de uno de los vectores una cierta distancia y luego camináramos rectamente en la dirección del otro.
-Para cualquier conjunto de vectores ${vv_1, vv_2, vv_3, vv_4, ...}$, los ponemos todos en un origen común y decimos que el universo de vectores que son conseguibles a través de combinaciones lineales de esos vectores son el *espacio generado* por dichos vectores (estos vectores serían el _sistema generador_).
-Pero ahora imaginemos que $uv$ y $vv$ son paralelos. ¿Generan realmente a $VV_2$?
-Bueno, no.
-Si pensamos en un sistema generador ${uv, vv}$ con $uv parallel vv$ vamos a obtener una línea recta porque solo podemos "movernos" en una dirección. Para que hayan 2 dimensiones, necesitamos combinar vectores en 2 direcciones distintas. Dos vectores colineales no pueden formar una base.
+    + Fijados $uv, vv in VV_2$ no nulos ni paralelos, cualquier $wv in VV_2$ puede ser _descompuesto_ según las direcciones de $uv$ y $vv$, habiendo únicos $alpha, beta in RR bar wv = alpha uv + beta vv$.
+    + ${uv, vv}$ es una base para $VV_2$ y $alpha$ y $beta$ son las _componentes_ de $wv$ en esa base.
+
+$alpha uv + beta uv$ es una *combinación lineal* de $uv$ y $vv$, esto es decir que solo los estamos sumando entre sí con distintas escalas, como si camináramos rectamente en la dirección de uno de los vectores una cierta distancia y luego camináramos rectamente en la dirección del otro. Para cualquier conjunto de vectores ${vv_1, vv_2, vv_3, vv_4, ...}$, los ponemos todos en un origen común y decimos que el universo de vectores que son conseguibles a través de combinaciones lineales de esos vectores son el *espacio generado* por dichos vectores (estos vectores serían el _sistema generador_).  Pero ahora imaginemos que $uv$ y $vv$ son paralelos. ¿Generan realmente a $VV_2$?  Bueno, no.  Si pensamos en un sistema generador ${uv, vv}$ con $uv parallel vv$ vamos a obtener una línea recta porque solo podemos "movernos" en una dirección. Para que hayan 2 dimensiones, necesitamos combinar vectores en 2 direcciones distintas. Dos vectores colineales no pueden formar una base.
+
 - $VV_3$: Todos los vectores del espacio.
-+ Fijando $uv, vv, wv in VV_3$ no nulos, no coplanares (no paralelos a un mismo plano), entonces para cualquier $xv$ hay únicos $alpha, beta, gamma in RR bar xv = alpha uv + beta vv + gamma wv$
-+ ${uv, vv, wv}$ base para $VV_3$ sobre $RR$, con $alpha, beta, gamma$ componentes de $xv$ en esa base.
+    + Fijando $uv, vv, wv in VV_3$ no nulos, no coplanares (no paralelos a un mismo plano), entonces para cualquier $xv$ hay únicos $alpha, beta, gamma in RR bar xv = alpha uv + beta vv + gamma wv$
+    + ${uv, vv, wv}$ base para $VV_3$ sobre $RR$, con $alpha, beta, gamma$ componentes de $xv$ en esa base.
 
 == Base de un espacio vectorial
 Para un *espacio vectorial* $V$ (es decir, un conjunto que actúa como universo de vectores) decimos que una *base* $cal(B)$ de $V$ sobre $RR$ es un sistema generador de $V$ cuyos elementos son *linealmente independientes* (es decir, "apuntan" en distintas direcciones).
 Eso quiere decir que se cumplirán las siguientes propiedades:
+
 - $cal(B)$ es un *sistema generador* de $V$. o sea:
-+ Sus elementos son vectores y pertenecen a $V$.
-+ El espacio vectorial $V$ completo puede generarse combinando linealmente los elementos de $cal(B)$
+    + Sus elementos son vectores y pertenecen a $V$.
+    + El espacio vectorial $V$ completo puede generarse combinando linealmente los elementos de $cal(B)$
+
 - Los elementos de $cal(B)$ forman un conjunto *linealmente independiente*. O sea:
-+ Ningún elemento de $cal(B)$ puede formarse como combinación lineal de los restantes.
-Notemos que si los elementos de $cal(B)$ son linealmente independientes, entonces no solo ninguno apunta en la misma dirección que el resto (es decir, no son paralelos entre sí) sino que ninguno puede pertenecer al espacio generado por el resto de los vectores. Es decir, si tenemos que ${uv, vv}$ es base de $VV_2$, entonces la única forma de tener un conjunto ${uv, vv, wv}$ que sea base de algún espacio vectorial, es que $wv$ no pertenezca al plano que forman $uv$ y $vv$. Es necesario que $wv$ se "despegue" de ese plano y, por lo tanto, ya no hay solo 2 dimensiones sino 3.
-Así tenemos que:
+    + Ningún elemento de $cal(B)$ puede formarse como combinación lineal de los restantes.
+
+Notemos que si los elementos de $cal(B)$ son linealmente independientes, entonces no solo ninguno apunta en la misma dirección que el resto (es decir, no son paralelos entre sí) sino que ninguno puede pertenecer al espacio generado por el resto de los vectores. Es decir, si tenemos que ${uv, vv}$ es base de $VV_2$, entonces la única forma de tener un conjunto ${uv, vv, wv}$ que sea base de algún espacio vectorial, es que $wv$ no pertenezca al plano que forman $uv$ y $vv$. Es necesario que $wv$ se "despegue" de ese plano y, por lo tanto, ya no hay solo 2 dimensiones sino 3. Así tenemos que:
+
 - $cal(B)$ debe tener exactamente tantos elementos como dimensiones espaciales tenga $V$.
 
 = Versores fundamentales del plano
